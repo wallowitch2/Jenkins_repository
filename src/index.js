@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('view', { welcomeMessage: '환영합니다 nodejs 입니다' });
+  res.render('view', { welcomeMessage: '환영합니다 AWS 입니다' });
 });
 
 const runApp = () => {
@@ -23,3 +23,7 @@ const runApp = () => {
 };
 
 module.exports = runApp;
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
+
