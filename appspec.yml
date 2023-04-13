@@ -8,14 +8,14 @@ files:
     destination: /var/www/my-nodejs-app/scripts
 hooks:
   ApplicationStop:
-    - location: /var/www/my-nodejs-app/scripts/stop_server.sh
+    - location: scripts/stop_server.sh
       timeout: 300
       runas: root
   BeforeInstall:
-    - location: /var/www/my-nodejs-app/scripts/install_dependencies.sh
+    - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: /var/www/my-nodejs-app/scripts/start_server.sh
+    - location: scripts/start_server.sh
       timeout: 300
       runas: root
