@@ -1,5 +1,5 @@
 const assert = require('assert');
-const app = require('../view');
+const app = require('../index');
 const request = require('supertest');
 
 
