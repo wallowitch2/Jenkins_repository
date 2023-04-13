@@ -19,4 +19,4 @@ app.get('/', (req, res) => {
       resolve(server);
     });
   });
-};
+});
