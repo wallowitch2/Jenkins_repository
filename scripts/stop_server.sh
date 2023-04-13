@@ -1,2 +1,2 @@
 #!/bin/bash
-pkill -f "node /var/www/my-nodejs-app/view.js"
+#pkill -f "node /var/www/my-nodejs-app/view.js"
