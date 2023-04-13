@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
   res.render('view', { welcomeMessage: '환영합니다 nodejs 입니다' });
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+  return new Promise((resolve) => {
+    const server = app.listen(port, () => {
+      console.log(`Example app listening on port ${port}`);
+      resolve(server);
+    });
+  });
+};
