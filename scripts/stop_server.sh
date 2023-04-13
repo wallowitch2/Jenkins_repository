@@ -1,2 +1,9 @@
 #!/bin/bash
-#pkill -f "node /var/www/my-nodejs-app/view.js"
+PID=$(pgrep -f "node view.js")
+
+if [ -n "$PID" ]; then
+  echo "Stopping Node.js application with process ID $PID"
+  kill "$PID"
+else
+  echo "Node.js application is not running"
+fi
