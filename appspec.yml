@@ -6,6 +6,7 @@ files:
     destination: /var/www/my-nodejs-app
   - source: scripts
     destination: /var/www/my-nodejs-app/scripts
+file_exists_behavior: OVERWRITE
 hooks:
   ApplicationStop:
     - location: scripts/stop_server.sh
