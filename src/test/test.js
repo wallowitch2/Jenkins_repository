@@ -16,7 +16,7 @@ describe('App', function() {
 
   it('should return 200', function(done) {
     request(server)
-    .get('/auth/login') 
+    .get('/') 
     .expect(200, done);
   });
 });
