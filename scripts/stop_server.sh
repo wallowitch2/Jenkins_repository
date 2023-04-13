@@ -1,5 +1,7 @@
 #!/bin/bash
-PID=$(pgrep -f "node view.js")
+set -e
+
+PID=$(pgrep -f "node view.js" || true )
 
 if [ -n "$PID" ]; then
   echo "Stopping Node.js application with process ID $PID"
